@@ -84,8 +84,8 @@ The caller gets the SDK's own response object back. Replay it later, with no key
 from flight_recorder import ReplayClient
 
 client = ReplayClient("run.jsonl")
-run_my_agent(client)        # Raises ReplayDivergence at the first request that differs.
-client.assert_exhausted()   # Raises if the agent stopped early.
+run_my_agent(client)  # Raises ReplayDivergence at the first request that differs.
+client.assert_exhausted()  # Raises if the agent stopped early.
 ```
 
 Or from the command line, with a `module:function` that takes a client:
